@@ -11,12 +11,14 @@ class UserInput extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        this.props.addName(this.state.name);
         this.setState({ name: "" });
     };
     render(){
-
         return (
             <form onSubmit={this.handleSubmit}>
+                {/* {console.log(this.props)} */}
+                {/* {console.log(this.state)} */}
                 <input 
                 type="text"
                 placeholder="Add a new name here..."
